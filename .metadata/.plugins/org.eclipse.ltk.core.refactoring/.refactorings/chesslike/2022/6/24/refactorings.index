@@ -1,0 +1,44 @@
+1654873548335	Move compilation unit
+1654873632490	Rename type 'MovementPattern'
+1654874429777	Move compilation unit
+1654874503995	Delete element
+1654874512216	Move compilation unit
+1654874517402	Delete element
+1654875286595	Move compilation units
+1654876092087	Delete element
+1654876257954	Copy compilation unit
+1654876264317	Copy compilation unit
+1654876275600	Copy compilation unit
+1654876281225	Copy compilation unit
+1654876289335	Copy compilation unit
+1654876296052	Copy compilation unit
+1654876303708	Copy compilation unit
+1654877743564	Copy compilation unit
+1654877755330	Delete element
+1654878693262	Move compilation unit
+1654881346529	Rename type 'PiecePositionObserver'
+1654916731529	Move compilation unit
+1654917475396	Move compilation unit
+1654920718971	Rename type 'PieceMoveObserver'
+1654920828193	Rename type 'PieceObserver'
+1654920845193	Copy compilation unit
+1654923319890	Move compilation unit
+1654930859576	Rename package 'game'
+1654930866023	Rename package 'ChessGameSetter'
+1654930950432	Move compilation unit
+1654931009692	Rename type 'ChessPieceMaker'
+1654931055943	Move compilation unit
+1654931074127	Move compilation unit
+1654932177308	Rename type 'testGameSetter1'
+1654933073794	Move compilation units
+1654933077482	Delete element
+1654938254675	Copy compilation unit
+1654939837962	Rename package 'GameRules'
+1654953973974	Rename type 'PieceCaptureingRule'
+1654954538035	Copy compilation unit
+1654959370962	Rename package 'chessGameRules'
+1654961629981	Move compilation unit
+1654961657133	Rename type 'MoveType'
+1654962485502	Move compilation unit
+1654962502484	Move compilation units
+1654965883283	Copy compilation unit

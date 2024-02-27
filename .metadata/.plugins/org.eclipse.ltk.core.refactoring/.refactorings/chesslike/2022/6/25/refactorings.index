@@ -1,0 +1,161 @@
+1655000738857	Delete element
+1655001233686	Rename type 'InType'
+1655004917844	Rename type 'NotSelfCheckRules'
+1655006907196	Move compilation unit
+1655009462842	Copy compilation unit
+1655009582707	Move compilation units
+1655009670669	Move compilation unit
+1655009946225	Copy compilation unit
+1655009980256	Delete element
+1655037434745	Copy compilation unit
+1655041192196	Copy compilation unit
+1655046992863	Copy compilation unit
+1655047015067	Rename type 'CastlingRules'
+1655050993114	Copy compilation unit
+1655052017149	Copy compilation unit
+1655052023069	Rename type 'testMove'
+1655060439191	Move compilation unit
+1655060473378	Rename type 'ChessType'
+1655060539257	Copy compilation unit
+1655060555059	Rename type 'MoveTypeInfo'
+1655061536171	Copy compilation unit
+1655061811688	Copy compilation unit
+1655063983744	Copy compilation unit
+1655082414155	Move method
+1655082474463	Move method
+1655082574723	Move method
+1655082608001	Move method
+1655082611044	Move method
+1655082614668	Move method
+1655082913918	Move method
+1655085145359	Move method
+1655085149435	Move method
+1655085159475	Move method
+1655085161929	Move method
+1655085204942	Move method
+1655085207641	Move method
+1655085218591	Move method
+1655085221035	Move method
+1655085236957	Move method
+1655085242967	Move method
+1655085251265	Move method
+1655085253186	Move method
+1655085255830	Move method
+1655085262002	Move method
+1655085343038	Move method
+1655085361179	Move method
+1655085363897	Move method
+1655085374839	Move field
+1655085384602	Move method
+1655085386947	Move method
+1655086011656	Move method
+1655086114956	Move method
+1655086153344	Move method
+1655086183401	Copy field
+1655086414703	Move method
+1655086420929	Move method
+1655086517487	Move method
+1655086574152	Move method
+1655086576796	Move method
+1655086591783	Move method
+1655087635126	Rename type 'MoveChessType'
+1655087658223	Rename type 'MovesChessType'
+1655088506150	Rename type 'MoveChessType'
+1655088516035	Rename type 'AttackChessType'
+1655089622098	Rename type 'BlankPositionRulesChessType'
+1655089633722	Rename type 'NotSuicideRulesChessType'
+1655089642418	Rename type 'PieceCaptureingRulesChessType'
+1655098257883	Move method
+1655105820157	Rename type 'PieceMoveObserver'
+1655106352524	Move compilation unit
+1655110047124	Move method
+1655119349893	Move compilation unit
+1655119358683	Move compilation units
+1655119562396	Rename type 'ChessPieceMoveFiilter'
+1655119655162	Move compilation unit
+1655119718742	Move compilation units
+1655126022321	Rename type 'GameGoingStatusSbject'
+1655126031337	Rename type 'GameGoingStatusObserver'
+1655173520930	Delete element
+1655173526613	Copy compilation unit
+1655173598559	Copy compilation unit
+1655173627719	Delete element
+1655173641682	Delete element
+1655173826540	Rename type 'ChessPieceRank'
+1655173849601	Rename type 'ChessPieceType'
+1655173866861	Rename type 'ChessPieceRank2'
+1655173975498	Rename type 'ChessPieceRank'
+1655173983082	Rename type 'ChessPieceType'
+1655173996470	Rename type 'ChessPieceRank2'
+1655174966901	Rename type 'ChessMoveType'
+1655174981292	Rename type 'ChessPieceMovePattern'
+1655174993624	Rename type 'MoveTypeInfo'
+1655175093426	Copy compilation unit
+1655175098382	Move compilation unit
+1655175171963	Rename type 'ChessMovesType'
+1655175245405	Rename type 'MocesType'
+1655177901064	Rename type 'ChessPieceRank'
+1655177905078	Rename type 'ChessPieceRank2'
+1655177911465	Rename type 'ChessPieceRank'
+1655178776965	Rename type 'ChessMovesAlias'
+1655192058934	Delete elements
+1655213460024	Infer generic type arguments
+1655215467826	Rename type 'WebControllerInterpreter'
+1655251116630	Copy compilation unit
+1655251599443	Copy compilation unit
+1655276753028	Move compilation unit
+1655276810625	Rename type 'GameFlowMaster'
+1655277017876	Delete element
+1655349701589	Delete element
+1655349710702	Delete element
+1655349744095	Delete element
+1655349749875	Delete element
+1655349763989	Delete element
+1655349965669	Rename type 'GameInfo'
+1655350691900	Rename type 'MovesTypeInfo'
+1655350979206	Rename type 'MovesTypeInfo2'
+1655352513986	Rename type 'MovePattern'
+1655353456965	Rename type 'PieceTypeInfo'
+1655354817145	Move compilation unit
+1655354835384	Copy compilation unit
+1655354841625	Move compilation unit
+1655354912156	Move compilation unit
+1655355735075	Rename type 'PieceTypeInfo2'
+1655358374669	Rename type 'AttackTypeChess'
+1655358383543	Rename type 'MoveTypeChess'
+1655358847875	Rename type 'NotSuicideRulesTypeChess'
+1655360236533	Rename type 'PieceCaptureingRulesTypeChess'
+1655360388980	Rename type 'BlankPositionRulesTypeChess'
+1655360739988	Rename type 'PieceTypeInfo'
+1655363222299	Rename type 'MoveTypeChecker'
+1655363602214	Delete elements
+1655363606667	Delete element
+1655363919789	Copy compilation unit
+1655363978119	Copy compilation unit
+1655364043870	Rename type 'BlankPositionRules'
+1655364069898	Copy compilation unit
+1655364202061	Copy compilation unit
+1655364212118	Delete element
+1655364292575	Delete element
+1655364315260	Delete element
+1655364417015	Delete element
+1655365854496	Copy compilation unit
+1655365862646	Rename type 'ChessPieceTypeCaster'
+1655371795238	Delete element
+1655377697985	Delete element
+1655377703528	Delete element
+1655386248332	Copy compilation unit
+1655387850213	Copy compilation unit
+1655387992649	Copy compilation unit
+1655388098479	Rename type 'IsCampUnitException'
+1655389403227	Copy compilation unit
+1655390164054	Copy compilation unit
+1655391246512	Copy compilation unit
+1655392085549	Delete element
+1655395627051	Copy compilation unit
+1655398949169	Copy compilation unit
+1655399062406	Rename type 'CheckmateRules'
+1655400024784	Delete element
+1655401014180	Rename type 'NotSuicideRules'
+1655402085706	Copy compilation unit
+1655402097937	Rename type 'ChessGameSetter2'

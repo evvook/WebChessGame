@@ -1,0 +1,105 @@
+package chessGameRules;
+
+import chess.gameparts.ChessPiece;
+import gameRules.Rules;
+import gameparts.Board;
+import gameparts.Position;
+import gameparts.piece.moves.MoveType;
+import gameparts.piece.moves.Moves;
+import gameparts.piece.relativePosition.PositionEast;
+import gameparts.piece.relativePosition.PositionWest;
+import gameparts.piece.relativePosition.RelativePosition;
+
+public class CastlingRules implements Rules {
+	private Rules nextRules;
+	private MoveType moveType;
+	private int distance;
+	private ChessPiece rook;
+	private RelativePosition direction;
+	private Board chessBoard;
+	
+	public CastlingRules(MoveType moveType, Board chessBoard) {
+		// TODO Auto-generated constructor stub
+		this.moveType = moveType;
+		this.chessBoard = chessBoard;
+	}
+
+	@Override
+	public void setNextRules(Rules rules) {
+		// TODO Auto-generated method stub
+		nextRules = rules;
+	}
+
+	@Override
+	public Moves judge(Moves moves) {
+		// TODO Auto-generated method stub
+		if(moves.moveType == MoveType.Castling) {
+			//두칸 이동하는 거만 골라냄(from to 비교)
+			setDistance(moves);
+			if(Math.abs(distance) == 2) {
+				setRook(moves);
+				//진영의 룩이 안 움직인 쪽만 골라냄
+				if(isRookUnmoved(moves)) {
+					if(isBetweenEmpty(moves)) {
+						//룩과 킹 사이가 비었는지 확인
+						return nextRules.judge(moves);
+					}
+				}
+				
+			}
+		}
+		return null;
+	}
+
+	private boolean isBetweenEmpty(Moves moves) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	private boolean isRookUnmoved(Moves moves) {
+		// TODO Auto-generated method stub
+		return rook.isFirstMoves();
+	}
+	
+	private void setRook(Moves moves) {
+		if(direction.getClass() == PositionEast.class) {
+			//king side
+			Position rookPosition = chessBoard.getPosition("a8");
+			if("Rook".equals(rookPosition.getOnPiece().getRankName())) {
+				
+			}
+			if() {
+				
+			}
+		}
+		if(direction.getClass() == PositionWest.class) {
+			
+		}
+	}
+
+	private void setDirection() {
+		// TODO Auto-generated method stub
+		if(distance > 0) {
+			//king side castling
+			direction = new PositionEast(null);
+		}
+		if(distance < 0) {
+			//queen side castling
+			direction = new PositionWest(null);
+		}
+	}	
+	
+	private void setDistance(Moves moves) {
+		// TODO Auto-generated method stub
+		char fromX = moves.getFrom().getLetterX().charAt(0);
+		char toX = moves.getTo().getLetterX().charAt(0);
+		distance = (int)toX - (int)fromX;
+	}
+
+	@Override
+	public MoveType getMoveType() {
+		// TODO Auto-generated method stub
+		return moveType;
+	}
+
+}

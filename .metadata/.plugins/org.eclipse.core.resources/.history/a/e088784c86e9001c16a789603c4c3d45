@@ -1,0 +1,145 @@
+package chessGameRules;
+
+import chess.gameparts.ChessPiece;
+import gameRules.Rules;
+import gameparts.Board;
+import gameparts.Position;
+import gameparts.piece.moves.MoveType;
+import gameparts.piece.moves.Moves;
+import gameparts.piece.relativePosition.PositionEast;
+import gameparts.piece.relativePosition.PositionWest;
+import gameparts.piece.relativePosition.RelativePosition;
+
+public class CastlingRules implements Rules {
+	private Rules nextRules;
+	private MoveType moveType;
+	private int distance;
+	private ChessPiece rook;
+	private RelativePosition direction;
+	private Board chessBoard;
+	
+	public CastlingRules(MoveType moveType, Board chessBoard) {
+		// TODO Auto-generated constructor stub
+		this.moveType = moveType;
+		this.chessBoard = chessBoard;
+	}
+
+	@Override
+	public void setNextRules(Rules rules) {
+		// TODO Auto-generated method stub
+		nextRules = rules;
+	}
+
+	@Override
+	public Moves judge(Moves moves) {
+		// TODO Auto-generated method stub
+		if(moves.moveType == MoveType.Castling) {
+			//킹이 안 움직였으면
+			ChessPiece king = (ChessPiece)moves.getFrom().getOnPiece();
+			if(king.isFirstMoves()) {
+				
+				setDistance(moves);
+				//두칸 이동하는 거만 골라냄(from to 비교)
+				if(Math.abs(distance) == 2) {
+					try {
+						setRook(moves);
+					}catch(Exception e) {
+						e.printStackTrace();
+						return null;
+					}
+					//진영의 룩이 안 움직인 경우
+					if(isRookUnmoved(moves)) {
+						
+						setDirection();
+						if(isBetweenEmpty(moves)) {
+							//룩과 킹 사이가 비었는지 확인
+							return nextRules.judge(moves);
+						}
+					}
+					
+				}
+			}
+		}
+		return null;
+	}
+
+	private boolean isBetweenEmpty(Moves moves) {
+		// TODO Auto-generated method stub
+		Position from = moves.getFrom();
+		Position to = rook.getPosition();
+		int fromX = (int)from.getLetterX().charAt(0);
+		int toX = (int)to.getLetterX().charAt(0);
+		
+		direction.getNext(from)
+		
+		return false;
+	}
+
+	private boolean isRookUnmoved(Moves moves) {
+		// TODO Auto-generated method stub
+		return rook.isFirstMoves();
+	}
+	
+	private void setDirection() {
+		// TODO Auto-generated method stub
+		if(distance > 0) {
+			//king side castling
+			direction = new PositionEast(null);
+		}
+		if(distance < 0) {
+			//queen side castling
+			direction = new PositionWest(null);
+		}
+	}	
+	
+	private void setRook(Moves moves) throws Exception {
+		Position rookPosition = null;
+		ChessPiece rookPositionPiece = null;
+		ChessPiece king = (ChessPiece)moves.getFrom().getOnPiece();
+		String kingsRank = king.getPosition().getLetterX();
+		
+		if(distance > 0) {
+			//king side
+			rookPosition = chessBoard.getPosition(kingsRank+"8");
+			rookPositionPiece = (ChessPiece)rookPosition.getOnPiece();
+			//룩 위치의 기물이 룩이고
+			if("R".equals(rookPositionPiece.getRankNotation())) {
+				
+				//킹과 룩이 같은 진영이면
+				if(king.getCamp().equals(rookPositionPiece.getCamp())){
+					rook = rookPositionPiece;
+				}
+			}
+		}
+		if(distance < 0) {
+			rookPosition = chessBoard.getPosition(kingsRank+"1");
+			rookPositionPiece = (ChessPiece)rookPosition.getOnPiece();
+			//룩 위치의 기물이 룩이고
+			if("R".equals(rookPositionPiece.getRankNotation())) {
+				
+				//킹과 룩이 같은 진영이면
+				if(king.getCamp().equals(rookPositionPiece.getCamp())){
+					rook = rookPositionPiece;
+				}
+			}
+		}
+		
+		if(rook == null) {
+			throw new Exception("룩이 없음");
+		}
+	}
+	
+	private void setDistance(Moves moves) {
+		// TODO Auto-generated method stub
+		char fromX = moves.getFrom().getLetterX().charAt(0);
+		char toX = moves.getTo().getLetterX().charAt(0);
+		distance = (int)toX - (int)fromX;
+	}
+
+	@Override
+	public MoveType getMoveType() {
+		// TODO Auto-generated method stub
+		return moveType;
+	}
+
+}
